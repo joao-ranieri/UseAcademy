@@ -19,12 +19,22 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: const Text('Use Academy'),
           centerTitle: true,
+          actions: const [
+            Padding(
+              padding: EdgeInsets.only(right: 12.0),
+              child: Icon(Icons.book),
+            )
+          ],
+          shape: const RoundedRectangleBorder(
+            borderRadius: BorderRadius.vertical(bottom: Radius.circular(20.0)),
+          ),
         ),
+        drawer: const Drawer(),
         backgroundColor: const Color(0xFFFFFFFF),
         bottomNavigationBar: BottomNavigationBar(
           backgroundColor: Colors.blue,
           selectedItemColor: const Color(0xFFFFFFFF),
-          unselectedLabelStyle: TextStyle(color: Colors.grey[300]),
+          unselectedItemColor: Colors.grey,
           items: const [
             BottomNavigationBarItem(
                 icon: Icon(Icons.home_repair_service_rounded), label: 'Home'),
